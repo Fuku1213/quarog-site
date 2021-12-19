@@ -181,6 +181,7 @@ body {
         flex-direction: column;
         border-radius: 5px;
         -webkit-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         margin-bottom: 16px;
     }
@@ -426,6 +427,7 @@ body {
         flex-direction: column;
         border-radius: 5px;
         -webkit-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         margin-bottom: 16px;
     }
@@ -711,6 +713,7 @@ body {
         flex-direction: column;
         border-radius: 5px;
         -webkit-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         margin-bottom: 16px;
     }
