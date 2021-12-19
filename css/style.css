@@ -559,7 +559,7 @@ body {
         transform: scale(0.8);
     }
 
-    #downloadlist>#downloadlistitem {
+    .downloadlist>.downloadlistitem {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
@@ -582,7 +582,7 @@ body {
         width: 50%;
     }
 
-    #downloadlistBtn {
+    .downloadlistBtn {
         width: 270px;
         height: 80%;
         padding: 0.5rem;
@@ -596,12 +596,12 @@ body {
         border-radius: 500px;
     }
 
-    #downloadlistBtn>img {
+    .downloadlistBtn>img {
         width: 3rem;
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    #downloadlistBtn>p {
+    .downloadlistBtn>p {
         font-size: 2rem;
     }
 
