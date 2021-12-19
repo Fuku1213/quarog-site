@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=400px, initial-scale=1.0">
+    <title>Quarog - Download</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- 検索エンジンに表示するため -->
+    <meta name="author" content="Fuku121303">
+    <meta name="description" content="Windows向けソフトウェア、Quarogの配布サイトです。">
+    <meta name="keywords" content="Fuku121303,Quarog,地震,緊急地震速報,EEW,地震ソフト">
+    <!-- OGP リンク共有時のサムネイル -->
+    <meta property="og:title" content="Quarog - Download">
+    <meta property="og:site_name" content="Quarog">
+    <meta property="og:url" content="https://fuku1213.github.io/software-quarog/">
+    <meta property="og:description" content="Windows向けソフトウェア、Quarogの配布サイトです。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/logo.png">
+    <!-- OGP Twitter用 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fuku121303">
+    <meta name="twitter:creator" content="@fuku121303">
+</head>
+
+<body>
+    <header>
+        <div id="headContent">
+            <div id="navigation">
+                <a href="./">
+                    <img src="./img/logo.png">
+                </a>
+                <div id="menu">
+                    <a href="./">Home</a>
+                    <a href="./#features">Features</a>
+                    <a href="./download.html">Download</a>
+                    <a href="./others.html">Others</a>
+                </div>
+                <div id="HamburgMenu">
+                    <div id="HamburgMenuIcon">
+                        <label id="menuIcon" class="material-icons-outlined" for="hamburgMenuCheck">
+                            menu
+                        </label>
+                        <input id="hamburgMenuCheck" type="checkbox" class="menuCheck">
+                        <div id="HamburgMenuList">
+                            <a href="./">Home</a>
+                            <a href="./#features">Features</a>
+                            <a href="./download.html">Download</a>
+                            <a href="./others.html">Others</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="content">
+        <section id="download">
+            <h2>Download</h2>
+            <div id="dlBack">
+                <a id="dlBtn" href="./">
+                    <img src="./img/logo.png">
+                    <p>Download latest version</p>
+                </a>
+                <p>推奨動作環境：Windows 7以上　2Core CPU　8GB RAM</p>
+            </div>
+        </section>
+        <section id="updateLog">
+            <h2>更新ログ</h2>
+        </section>
+    </div>
+
+    <footer>
+        <div id="footContent">
+            <p>© 2021 Quarog - All rights reserved.<br><a href="https://twitter.com/fuku121303">@fuku121303</a>, Website by <a href="https://twitter.com/Yakijake_852">@Yakijake_852</a></p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    $(function() {
+        $.ajax({
+            url: "./update.json",
+            type: "GET",
+            dataType: "json",
+        }).done((data) => {
+            for (let i = 0; i < data.history.length; i++) {
+                let newer = "",
+                change = "",
+                fix = "",
+                important = "",
+                other = "";
+
+                // 更新内容 - 追加
+                if (data.history[i].cont.new.length > 0) {
+                    let cache = "";
+                    let length = data.history[i].cont.new.length;
+                    for (let j = 0; j < length; j++) {
+                        cache += `<li>${data.history[i].cont.new[j]}</li>`;
+                    }
+                    newer = `<li><b>追加</b><ul>${cache}</ul></li>`;
+                } else {
+                    newer = ``;
+                }
+
+                // 更新内容 - 変更
+                if (data.history[i].cont.change.length > 0) {
+                    let cache = "";
+                    let length = data.history[i].cont.change.length;
+                    for (let j = 0; j < length; j++) {
+                        cache += `<li>${data.history[i].cont.change[j]}</li>`;
+                    }
+                    change = `<li><b>変更</b><ul>${cache}</ul></li>`;
+                } else {
+                    change = ``;
+                }
+
+                // 更新内容 - 修正
+                if (data.history[i].cont.fix.length > 0) {
+                    let cache = "";
+                    let length = data.history[i].cont.fix.length;
+                    for (let j = 0; j < length; j++) {
+                        cache += `<li>${data.history[i].cont.fix[j]}</li>`;
+                    }
+                    fix = `<li><b>修正</b><ul>${cache}</ul></li>`;
+                } else {
+                    fix = ``;
+                }
+
+                // 更新内容 - 重要
+                if (data.history[i].cont.important.length > 0) {
+                    let cache = "";
+                    let length = data.history[i].cont.important.length;
+                    for (let j = 0; j < length; j++) {
+                        cache += `<li>${data.history[i].important.fix[j]}</li>`;
+                    }
+                    important = `<li><b>重要</b><ul>${cache}</ul></li>`;
+                } else {
+                    important = ``;
+                }
+
+                // 更新内容 - その他
+                if (data.history[i].cont.other.length > 0) {
+                    let cache = "";
+                    let length = data.history[i].cont.other.length;
+                    for (let j = 0; j < length; j++) {
+                        cache += `<li>${data.history[i].other.fix[j]}</li>`;
+                    }
+                    other = `<li><b>その他</b><ul>${cache}</ul></li>`;
+                } else {
+                    other = ``;
+                }
+
+                $("#updateLog").append(
+                    `<ul>
+                        <li><b style="font-size: 1.4rem;">ver. ${data.history[i].ver} - ${data.history[i].date} 更新</b>
+                            <ul>
+                                ${newer}
+                                ${change}
+                                ${fix}
+                                ${important}
+                                ${other}
+                            </ul>
+                        </li>
+                    </ul>`
+                );
+            }
+        }).fail((error) => {
+            console.log(error);
+        });
+    });
+</script>
+
+</html>

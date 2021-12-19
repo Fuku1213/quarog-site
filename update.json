@@ -1,0 +1,30 @@
+{
+    "latest": {
+        "ver": "1.0.0",
+        "date": "2021/12/??",
+        "main": "正式版リリース"
+    },
+    "history": [
+        {
+            "ver": "1.0.0",
+            "date": "2021/12/??",
+            "cont": {
+                "new": "",
+                "change": "",
+                "fix": "",
+                "important": "",
+                "other": ""
+            }
+        },{
+            "ver": "",
+            "date": "",
+            "cont": {
+                "new": "",
+                "change": "",
+                "fix": "",
+                "important": "",
+                "other": ""
+            }
+        }
+    ]
+}
