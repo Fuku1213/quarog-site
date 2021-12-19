@@ -559,6 +559,65 @@ body {
         transform: scale(0.8);
     }
 
+    #downloadlist>#downloadlistitem {
+        position: relative;
+        overflow: hidden;
+        margin: 0.5rem auto;
+        width: auto;
+        height: auto;
+        background-color: rgb(249, 252, 255);
+        background-size: cover;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    table td{
+        text-align: center;
+        vertical-align:middle;
+        width: 50%;
+    }
+
+    #downloadlistBtn {
+        width: 270px;
+        height: 80%;
+        padding: 0.5rem;
+        margin: 2%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
+
+    #downloadlistBtn>img {
+        width: 3rem;
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    }
+
+    #downloadlistBtn>p {
+        font-size: 2rem;
+    }
+
+    #dlBack>p {
+        display: flex;
+        align-items: baseline;
+        color: rgb(255, 255, 255);
+        transform: scale(0.8);
+        letter-spacing: 0;
+    }
+
+    #dlBack>a {
+        color: rgb(255, 255, 255);
+        transform: scale(0.8);
+    }
+
     /* Othersページ */
 
     #organization>ul {
