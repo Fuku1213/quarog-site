@@ -378,3 +378,6 @@ table td {
 #organization>p {
   text-align: right;
 }
+#empty {
+  color: #fff;
+}
