@@ -60,36 +60,56 @@
 
     <div id="content">
         <section id="downloadlist">
-            <h2>Quarog Latest Version</h2>
-            <p>推奨動作環境：Windows 7以上　2Core CPU　8GB RAM</p>
-            <div id="downloadlistitem">
+            <h2>Download</h2>
+            <div class="system">
+                <h3>推奨動作環境</h3>
+                <ul>
+                    <li>Windows 7以上</li>
+                    <li>2Core CPU</li>
+                    <li>4GB RAM</li>
+                </ul>
+            </div>
+            <div class="precautions">
+                <h3>注意事項</h3>
+                <ul>
+                    <li>Quarogはクローズドソフトウェアです</li>
+                    <li>Quarogの再配布及びデコンパイルは<b>一切禁止</b>とさせていただきます</li>
+                    <li>Quarog内で扱われる緊急地震速報は様々な特性を持っています。それを理解した上でご利用ください。<a href="https://www.data.jma.go.jp/svd/eew/data/nc/">緊急地震速報について</a></li>
+                    <li>Quarogによって発生したいかなる免責も負いかねます。</li>
+                </ul>
+            </div>
+            <div class="download">
+                <h3>ダウンロード</h3>
+                    <p><b>公開中のバージョン</b>：Ver 1.0.0</p>
+                    <p><b>公開日</b>：2021/12/??</p>
+                <div class="downloadlistitem">
                 <table width="90%" > 
                     <tr>
-                        <td> <h2>Without Runtime</h2> </td>
-                        <td> <a id="downloadlistBtn" href="./">
+                        <td> <h3>Quarog without Runtime</h3> </td>
+                        <td> <a class="downloadlistBtn" href="./">
                             <img src="./img/logo.png">
                             <p>Download</p>
                             </a> </td>
                     </tr>
                 </table>
-                <p><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/5.0">.NET 5 Runtime(x64)</a>が必要です</p>
-            </div>
-            <div id="downloadlistitem">
-                <table width="90%"> 
-                    <tr>
-                        <td> <h2>Runtime-merged</h2> </td>
-                        <td> <a id="downloadlistBtn" href="./">
-                            <img src="./img/logo.png">
-                            <p>Download</p>
-                            </a> </td>
-                    </tr>
-                </table>
-                <p><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/5.0">.NET 5 Runtime(x64)</a>は必要ありません</p>
-                <p>アプリケーションの起動速度が遅くなります</p>
+                <p class="comments"><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/5.0">.NET 5 Runtime(x64)</a>が必要です</p>
+                </div>
+                <div class="downloadlistitem">
+                    <table width="90%"> 
+                        <tr>
+                            <td> <h3>Quarog Runtime-merged</h3> </td>
+                            <td> <a class="downloadlistBtn" href="./">
+                                <img src="./img/logo.png">
+                                <p>Download</p>
+                                </a> </td>
+                        </tr>
+                    </table>
+                    <p>.NET 5 Runtime(x64)は必要ありませんが、ソフトの起動速度が遅くなります</p>
+                </div>
             </div>
         </section>
         <section id="updateLog">
-            <h2>更新ログ</h2>
+            <h3>アップデート履歴</h3>
         </section>
     </div>
 

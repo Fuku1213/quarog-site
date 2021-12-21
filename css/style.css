@@ -8,7 +8,7 @@ html {
 body {
     background-color: rgb(240, 245, 250);
     color: rgb(20, 30, 40);
-    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI",  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .material-icons-outlined {
@@ -341,10 +341,19 @@ body {
 
     #content h2 {
         font-size: 1.8rem;
-        margin: auto auto;
+        margin-top: 1.4rem;
     }
 
     #content h2:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    #content h3 {
+        font-size: 1.4rem;
+        margin: 1.4rem auto auto auto;
+    }
+
+    #content h3:not(:first-child) {
         margin-top: 1rem;
     }
 
@@ -407,10 +416,10 @@ body {
     }
 
     .featuresTiles {
-        width: 28rem;
+        width: 22rem;
         display: flex;
         justify-content: center;
-        margin: 1rem auto;
+        margin: 1px auto 2rem auto;
         flex-direction: column;
         align-content: flex-start;
         align-items: center;
@@ -429,7 +438,8 @@ body {
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        margin-bottom: 16px;
+        margin-bottom: 0.2rem;
+        flex-grow: 1;
     }
 
     #featuresBase p{
@@ -440,8 +450,8 @@ body {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
-        width: 550px;
-        height: 212px;
+        width: 90%;
+        height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
         z-index: 0;
@@ -466,7 +476,7 @@ body {
     }
 
     .dlBtn {
-        width: 540px;
+        width: 84%;
         height: 70px;
         padding: 0.5rem;
         background-color: rgba(0, 0, 0, 0.7);
@@ -483,7 +493,7 @@ body {
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    .dlBtn>p {
+    #dlBack>.dlBtn>p {
         font-size: 2rem;
     }
 
@@ -493,6 +503,7 @@ body {
         color: rgb(255, 255, 255);
         transform: scale(0.8);
         letter-spacing: 0;
+        font-size: 1.3rem;
     }
 
     #dlBack>a {
@@ -500,7 +511,7 @@ body {
         transform: scale(0.8);
     }
 
-    #downloadlist>#downloadlistitem {
+    #downloadlist>.download>.downloadlistitem {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
@@ -517,18 +528,21 @@ body {
         border-radius: 5px;
     }
 
+    #downloadlist>.download>.downloadlistitem h3{
+        margin-top: 0px;
+    }
+
     table td{
-        text-align: center;
         vertical-align:middle;
         width: 50%;
     }
 
-    #downloadlistBtn {
-        width: 270px;
-        height: 80%;
+    .downloadlistBtn {
+        width: 240px;
+        height: 50%;
         padding: 0.5rem;
         margin: 2%;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(20, 30, 40, 0.8);
         color: rgb(245, 245, 245) !important;
         display: flex;
         align-items: center;
@@ -537,13 +551,13 @@ body {
         border-radius: 500px;
     }
 
-    #downloadlistBtn>img {
-        width: 3rem;
+    .downloadlistBtn>img {
+        width: 2.4rem;
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    #downloadlistBtn>p {
-        font-size: 2rem;
+    .downloadlistBtn>p {
+        font-size: 1.8rem;
     }
 
     #dlBack>p {
