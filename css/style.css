@@ -1,940 +1,380 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
-
 body {
-    background-color: rgb(240, 245, 250);
-    color: rgb(20, 30, 40);
-    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI",  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #f0f5fa;
+  color: #141e28;
+  font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-
 .material-icons-outlined {
-    font-family: "Material Icons";
+  font-family: "Material Icons";
 }
-
-@media screen and (min-width: 1024px) {
-    /* デスクトップ向け */
-
-    /* ヘッダー */
-    header {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #headContent {
-        width: 1000px;
-        height: 100%;
-        margin: auto auto;
-    }
-
-    #navigation {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-    }
-
-    #navigation>#menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        width: 40%;
-    }
-
-    #navigation>#menu>a:hover {
-        background-color: rgb(242, 246, 250);
-        color: rgb(20, 30, 100);
-    } 
-
-    #navigation>#menu>a{
-        padding: 1.2em;
-    }
-    
-
-    #navigation>a>img {
-        width: 2.5rem;
-    }
-
-    #navigation a {
-        color: rgb(20, 30, 40);
-        text-decoration: none; 
-    }
-
-    #HamburgMenu {
-        display: none;
-    }
-
-    /* メインコンテンツ */
-
-    #content {
-        width: 1000px;
-        margin: 1rem auto;
-    }
-
-    #content>section {
-        margin: 1rem auto;
-    }
-
-    #content h1 {
-        font-size: 2rem;
-        margin: 20px 20px;
-        text-align: center;
-    }
-
-    #content h2 {
-        font-size: 1.6rem;
-        margin: auto auto;
-    }
-
-    #content h2:not(:first-child) {
-        margin-top: 1rem;
-    }
-
-    #content p {
-        font-size: 1.2rem;
-        margin: 0.5rem 0.5rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.75rem;
-    }
-
-    #content a {
-        color: rgb(70, 70, 70);
-    }
-
-    #content ul li {
-        font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.6rem;
-        list-style-position: inside;
-    }
-
-    /* フッター */
-
-    footer {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #footContent {
-        width: 1000px;
-        height: 100%;
-        margin: auto auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footContent>p {
-        letter-spacing: 0.05rem;
-        line-height: 1.5rem;
-        text-align: center;
-    }
-
-    #footContent a {
-        color: rgb(40, 40, 40);
-    }
-
-    /* メインページ */
-
-    #hero>img {
-        width: 1000px;
-    }
-
-    #featuresBase {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .featuresTiles {
-        width: 28rem;
-        display: flex;
-        justify-content: flex-start;
-        vertical-align: top;
-        margin: 1rem auto;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
-        border-radius: 5px;
-        padding: 0.5rem;
-        background-color: rgb(249, 252, 255);
-    }
-
-    #featuresBase p{
-        font-size: 1rem;
-    }
-
-    #featuresBase img{
-        flex-grow: 1;
-        max-width:100%;
-        object-fit: contain;
-        flex-direction: column;
-        border-radius: 5px;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        margin-bottom: 16px;
-    }
-
-    #download>#dlBack {
-        position: relative;
-        overflow: hidden;
-        margin: 0.5rem auto;
-        width: 800px;
-        height: 308px;
-        background-image: url(../img/hero.png);
-        background-size: cover;
-        border-radius: 10px;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #download>#dlBack:before{
-        content: "";
-        background: inherit;
-        filter: blur(10px) brightness(60%) contrast(90%);
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        z-index: -1;
-    }
-
-    .dlBtn {
-        width: 540px;
-        height: 70px;
-        padding: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: rgb(245, 245, 245);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        text-decoration: none;
-        border-radius: 500px;
-    }
-
-    .dlBtn>img {
-        width: 3rem;
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-    }
-
-    .dlBtn>p {
-        font-size: 2rem;
-    }
-
-    #dlBack>p {
-        display: flex;
-        align-items: baseline;
-        color: rgb(255, 255, 255);
-    }
-
-    #dlBack>a {
-        color: rgb(255, 255, 255);
-    }
-
-    #downloadlist>#downloadlistitem {
-        position: relative;
-        overflow: hidden;
-        margin: 0.5rem auto;
-        width: auto;
-        height: auto;
-        background-color: rgb(249, 252, 255);
-        background-size: cover;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 5px;
-    }
-
-    table td{
-        text-align: center;
-        vertical-align:middle;
-        width: 50%;
-    }
-
-    #downloadlistBtn {
-        width: 270px;
-        height: 80%;
-        padding: 0.5rem;
-        margin: 2%;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: rgb(245, 245, 245) !important;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        text-decoration: none;
-        border-radius: 500px;
-    }
-
-    #downloadlistBtn>img {
-        width: 3rem;
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-    }
-
-    #downloadlistBtn>p {
-        font-size: 2rem;
-    }
-
-    #dlBack>p {
-        display: flex;
-        align-items: baseline;
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-        letter-spacing: 0;
-    }
-
-    #dlBack>a {
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-    }
-
-    /* Othersページ */
-
-    #organization>ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    #organization>ul>li {
-        width: 46%;
-    }
-
-    #organization>ul>li:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
-
-    #organization>p {
-        text-align: right;
-    }
+/* ヘッダー */
+header {
+  width: 100%;
+  height: 4rem;
+  background: #dce6f0;
 }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* タブレット向け */
-
-    /* ヘッダー */
-    header {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #headContent {
-        width: 750px;
-        height: 100%;
-        margin: auto auto;
-    }
-
-    #navigation {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-    }
-
-    #navigation>#menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        width: 50%;
-    }
-    
-    #navigation>#menu>a:hover {
-        background-color: rgb(242, 246, 250);
-        color: rgb(20, 30, 100);
-    } 
-
-    #navigation>#menu>a{
-        padding: 1.2em;
-    }
-
-    #navigation>a>img {
-        width: 2.5rem;
-    }
-
-    #navigation a {
-        color: rgb(20, 30, 40);
-        text-decoration: none; 
-    }
-
-    #HamburgMenu {
-        display: none;
-    }
-
-    /* メインコンテンツ */
-
-    #content {
-        width: 750px;
-        margin: 1rem auto;
-    }
-
-    #content>section {
-        margin: 1rem auto;
-    }
-
-    #content h1 {
-        font-size: 2rem;
-        margin: 20px 20px;
-        text-align: center;
-    }
-
-    #content h2 {
-        font-size: 1.8rem;
-        margin-top: 1.4rem;
-    }
-
-    #content h2:not(:first-child) {
-        margin-top: 1rem;
-    }
-
-    #content h3 {
-        font-size: 1.4rem;
-        margin: 1.4rem auto auto auto;
-    }
-
-    #content h3:not(:first-child) {
-        margin-top: 1rem;
-    }
-
-    #content p {
-        font-size: 1.2rem;
-        margin: 0.5rem 0.5rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.75rem;
-    }
-
-    #content a {
-        color: rgb(70, 70, 70);
-    }
-
-    #content ul li {
-        font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.6rem;
-        list-style-position: inside;
-    }
-
-    /* フッター */
-
-    footer {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #footContent {
-        width: 750px;
-        height: 100%;
-        margin: auto auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footContent>p {
-        letter-spacing: 0.05rem;
-        line-height: 1.5rem;
-        text-align: center;
-    }
-
-    #footContent a {
-        color: rgb(40, 40, 40);
-    }
-
-    /* メインページ */
-
-    #hero>img {
-        width: 750px;
-    }
-
-    #featuresBase {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .featuresTiles {
-        width: 22rem;
-        display: flex;
-        justify-content: center;
-        margin: 1px auto 2rem auto;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
-        border-radius: 5px;
-        padding: 0.5rem;
-        background-color: rgb(249, 252, 255);
-    }
-
-    #featuresBase img{
-        justify-content: flex-start;
-        max-width:100%;
-        flex-direction: column;
-        border-radius: 5px;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        margin-bottom: 0.2rem;
-        flex-grow: 1;
-    }
-
-    #featuresBase p{
-        font-size: 1rem;
-    }
-
-    #download>#dlBack {
-        position: relative;
-        overflow: hidden;
-        margin: 0.5rem auto;
-        width: 90%;
-        height: 240px;
-        background-image: url(../img/hero.png);
-        background-size: cover;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 5px;
-    }
-
-    #download>#dlBack:before{
-        content: "";
-        background: inherit;
-        filter: blur(10px) brightness(60%) contrast(90%);
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        z-index: -1;
-    }
-
-    .dlBtn {
-        width: 84%;
-        height: 70px;
-        padding: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: rgb(245, 245, 245);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        text-decoration: none;
-        border-radius: 500px;
-    }
-
-    .dlBtn>img {
-        width: 3rem;
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-    }
-
-    #dlBack>.dlBtn>p {
-        font-size: 2rem;
-    }
-
-    #dlBack>p {
-        display: flex;
-        align-items: baseline;
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-        letter-spacing: 0;
-        font-size: 1.3rem;
-    }
-
-    #dlBack>a {
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-    }
-
-    #downloadlist>.download>.downloadlistitem {
-        position: relative;
-        overflow: hidden;
-        margin: 0.5rem auto;
-        width: auto;
-        height: auto;
-        background-color: rgb(249, 252, 255);
-        background-size: cover;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 5px;
-    }
-
-    #downloadlist>.download>.downloadlistitem h3{
-        margin-top: 0px;
-    }
-
-    table td{
-        vertical-align:middle;
-        width: 50%;
-    }
-
-    .downloadlistBtn {
-        width: 240px;
-        height: 50%;
-        padding: 0.5rem;
-        margin: 2%;
-        background-color: rgba(20, 30, 40, 0.8);
-        color: rgb(245, 245, 245) !important;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        text-decoration: none;
-        border-radius: 500px;
-    }
-
-    .downloadlistBtn>img {
-        width: 2.4rem;
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-    }
-
-    .downloadlistBtn>p {
-        font-size: 1.8rem;
-    }
-
-    #dlBack>p {
-        display: flex;
-        align-items: baseline;
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-        letter-spacing: 0;
-    }
-
-    #dlBack>a {
-        color: rgb(255, 255, 255);
-        transform: scale(0.8);
-    }
-
-    /* Othersページ */
-
-    #organization>ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    #organization>ul>li {
-        width: 70%;
-    }
-
-    #organization>ul>li:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
-
-    #organization>p {
-        text-align: right;
-    }
+#headContent {
+  width: 750px;
+  height: 100%;
+  margin: auto auto;
 }
-
-@media screen and (max-width: 768px) {
-    /* スマートフォン向け */
-
-    /* ヘッダー */
-    header {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #headContent {
-        width: calc(100% - 10px);
-        height: 100%;
-        margin: auto auto;
-    }
-
-    #navigation {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 1.2rem;
-    }
-
-    #navigation>#menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-        width: 60%;
-    }
-
-    #navigation>a>img {
-        width: 2.5rem;
-    }
-
-    #navigation a {
-        color: rgb(20, 30, 40);
-        text-decoration: none; 
-    }
-
-    #navigation>#menu>a:hover {
-        background-color: rgb(242, 246, 250);
-        color: rgb(20, 30, 100);
-    } 
-
-    #navigation>#menu>a{
-        padding: 1.2em;
-    }
-
-
-    #menu {
-        display: none !important;
-    }
-
-    #menuIcon {
-        font-size: 3rem;
-    }
-
-    .menuCheck {
-        display: none;
-    }
-
-    #HamburgMenuList {
-        display: none;
-    }
-
-    .menuCheck:checked ~ #HamburgMenuList {
-        position: absolute;
-        right: 0px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        line-height: 2.75rem;
-        top: 4rem;
-        background-color: rgb(210, 220, 230);
-        animation: 100ms fadeIn;
-        z-index: 9999;
-        border-radius: 5px;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* メインコンテンツ */
-
-    #content {
-        width: calc(100% - 10px);
-        margin: 1rem auto;
-    }
-
-    #content>section {
-        margin: 1rem auto;
-    }
-    
-    #content h1 {
-        font-size: 2rem;
-        margin: 20px 20px;
-        text-align: center;
-    }
-
-    #content h2 {
-        font-size: 1.8rem;
-        margin: auto auto;
-    }
-
-    #content h2:not(:first-child) {
-        margin-top: 1rem;
-    }
-
-    #content p {
-        font-size: 1.2rem;
-        margin: 0.5rem 0.5rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.75rem;
-    }
-
-    #content a {
-        color: rgb(70, 70, 70);
-    }
-
-    #content ul li {
-        font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.6rem;
-        list-style-position: inside;
-    }
-
-    /* フッター */
-
-    footer {
-        width: 100%;
-        height: 4rem;
-        background: rgb(220, 230, 240);
-    }
-
-    #footContent {
-        width: calc(100% - 10px);
-        height: 100%;
-        margin: auto auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footContent>p {
-        letter-spacing: 0.05rem;
-        line-height: 1.5rem;
-        text-align: center;
-    }
-
-    #footContent a {
-        color: rgb(40, 40, 40);
-    }
-
-    /* メインページ */
-
-    #hero>img {
-        width: 100%;
-    }
-
-    #featuresBase {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .featuresTiles {
-        width: 28rem;
-        display: flex;
-        justify-content: center;
-        margin: 1rem auto;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 10%);
-        border-radius: 5px;
-        padding: 0.5rem;
-        background-color: rgb(249, 252, 255);
-    }
-
-    #featuresBase img{
-        justify-content: flex-start;
-        max-width:100%;
-        flex-direction: column;
-        border-radius: 5px;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        margin-bottom: 16px;
-    }
-
-    #featuresBase p{
-        font-size: 1rem;
-    }
-
-    #download>#dlBack {
-        position: relative;
-        overflow: hidden;
-        margin: 0.5rem auto;
-        width: 380px;
-        height: 146px;
-        background-image: url(../img/hero.png);
-        background-size: cover;
-        z-index: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #download>#dlBack:before{
-        content: "";
-        background: inherit;
-        filter: blur(10px) brightness(60%) contrast(90%);
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        z-index: -1;
-    }
-
-    .dlBtn {
-        width: 540px;
-        height: 70px;
-        padding: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: rgb(245, 245, 245);
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        text-decoration: none;
-        border-radius: 500px;
-    }
-
-    .dlBtn>img {
-        width: 3rem;
-        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-    }
-
-    .dlBtn>p {
-        font-size: 2rem;
-    }
-
-    #dlBack>p {
-        display: flex;
-        align-items: baseline;
-        color: rgb(255, 255, 255);
-        transform: scale(0.7);
-        width: 140%;
-        justify-content: center;
-    }
-
-    #dlBack>a {
-        color: rgb(255, 255, 255);
-        transform: scale(0.6);
-    }
-
-    /* Othersページ */
-
-    #organization>ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    #organization>ul>li {
-        width: 90%;
-    }
-
-    #organization>ul>li:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
-
-    #organization>p {
-        text-align: right;
-    }
+#navigation {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+}
+#navigation>#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 50%;
+}
+#navigation>#menu>a:hover {
+  background-color: #f2f6fa;
+  color: #141e64;
+}
+#navigation>#menu>a {
+  padding: 1.2em;
+}
+#navigation>a>img {
+  width: 2.5rem;
+}
+#navigation a {
+  color: #141e28;
+  text-decoration: none;
+}
+#HamburgMenu {
+  display: none;
+}
+/* メインコンテンツ */
+#content {
+  width: 750px;
+  margin: 1rem auto;
+}
+#content>section {
+  margin: 1rem auto;
+}
+#content h1 {
+  font-size: 2rem;
+  margin: 20px 20px;
+  text-align: center;
+}
+#content h2 {
+  font-size: 1.8rem;
+  margin-top: 1.4rem;
+}
+#content h2:not(:first-child) {
+  margin-top: 1rem;
+}
+#content h3 {
+  font-size: 1.4rem;
+  margin: 1.4rem auto auto auto;
+}
+#content h3:not(:first-child) {
+  margin-top: 1rem;
+}
+#content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.75rem;
+}
+#content a {
+  color: #464646;
+}
+#content ul li {
+  font-size: 1.2rem;
+  margin: 0.5rem 1rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.6rem;
+  list-style-position: inside;
+}
+/* フッター */
+footer {
+  width: 100%;
+  height: 4rem;
+  background: #dce6f0;
+}
+#footContent {
+  width: 750px;
+  height: 100%;
+  margin: auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#footContent>p {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+#footContent a {
+  color: #282828;
+}
+/* メインページ */
+#hero>img {
+  width: 750px;
+}
+#featuresBase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.featuresTiles {
+  width: 22rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1px auto 2rem auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
+          box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #f9fcff;
+}
+#featuresBase img {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  margin-bottom: 0.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+#featuresBase p {
+  font-size: 1rem;
+}
+#download>#dlBack {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 240px;
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+#download>#dlBack:before {
+  content: "";
+  background: inherit;
+  -webkit-filter: blur(10px) brightness(60%) contrast(90%);
+          filter: blur(10px) brightness(60%) contrast(90%);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+.dlBtn {
+  width: 84%;
+  height: 70px;
+  padding: 0.5rem;
+  background-color: rgba(0,0,0,0.7);
+  color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 500px;
+}
+.dlBtn>img {
+  width: 3rem;
+  -webkit-filter: drop-shadow(0px 0px 2px #fff);
+          filter: drop-shadow(0px 0px 2px #fff);
+}
+#dlBack>.dlBtn>p {
+  font-size: 2rem;
+}
+#dlBack>p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  color: #fff;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  letter-spacing: 0;
+  font-size: 1.3rem;
+}
+#dlBack>a {
+  color: #fff;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+#downloadlist>.download>.downloadlistitem {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem auto;
+  width: auto;
+  height: auto;
+  background-color: #f9fcff;
+  background-size: cover;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+#downloadlist>.download>.downloadlistitem h3 {
+  margin-top: 0px;
+}
+table td {
+  vertical-align: middle;
+  width: 50%;
+}
+.downloadlistBtn {
+  width: 240px;
+  height: 50%;
+  padding: 0.5rem;
+  margin: 2%;
+  background-color: rgba(20,30,40,0.8);
+  color: #f5f5f5 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 500px;
+}
+.downloadlistBtn>img {
+  width: 2.4rem;
+  -webkit-filter: drop-shadow(0px 0px 2px #fff);
+          filter: drop-shadow(0px 0px 2px #fff);
+}
+.downloadlistBtn>p {
+  font-size: 1.8rem;
+}
+#dlBack>p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  color: #fff;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  letter-spacing: 0;
+}
+#dlBack>a {
+  color: #fff;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+/* Othersページ */
+#organization>ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+#organization>ul>li {
+  width: 70%;
+}
+#organization>ul>li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+#organization>p {
+  text-align: right;
 }
