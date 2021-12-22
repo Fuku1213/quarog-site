@@ -409,7 +409,7 @@ body {
 
     #content h3 {
         font-size: 1.4rem;
-        margin: 1.4rem auto auto auto;
+        margin-top: 1.7rem;
     }
 
     #content h3:not(:first-child) {
@@ -424,7 +424,7 @@ body {
     }
 
     #content a {
-        color: rgb(70, 70, 70);
+        color: rgb(20, 30, 100);
     }
 
     #content ul li {
@@ -459,7 +459,7 @@ body {
     }
 
     #footContent a {
-        color: rgb(40, 40, 40);
+        color: rgb(20, 30, 40);
     }
 
     /* メインページ */
