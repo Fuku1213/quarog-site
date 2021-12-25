@@ -88,11 +88,20 @@ body {
     }
 
     #content h2 {
-        font-size: 1.6rem;
-        margin: auto auto;
+        font-size: 1.8rem;
+        margin-top: 1.4rem;
     }
 
     #content h2:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    #content h3 {
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
+    }
+
+    #content h3:not(:first-child) {
         margin-top: 1rem;
     }
 
@@ -104,7 +113,7 @@ body {
     }
 
     #content a {
-        color: rgb(70, 70, 70);
+        color: rgb(20, 30, 100);
     }
 
     #content ul li {
@@ -113,6 +122,7 @@ body {
         letter-spacing: 0.02rem;
         line-height: 1.6rem;
         list-style-position: inside;
+        text-indent: -1.4em;
     }
 
     /* フッター */
@@ -124,7 +134,7 @@ body {
     }
 
     #footContent {
-        width: 1000px;
+        width: 750px;
         height: 100%;
         margin: auto auto;
         display: flex;
@@ -139,13 +149,13 @@ body {
     }
 
     #footContent a {
-        color: rgb(40, 40, 40);
+        color: rgb(20, 30, 40);
     }
 
     /* メインページ */
 
     #hero>img {
-        width: 1000px;
+        max-width:100%;
     }
 
     #featuresBase {
@@ -155,11 +165,10 @@ body {
     }
 
     .featuresTiles {
-        width: 28rem;
+        width: 29rem;
         display: flex;
-        justify-content: flex-start;
-        vertical-align: top;
-        margin: 1rem auto;
+        justify-content: center;
+        margin: 1px auto 2rem auto;
         flex-direction: column;
         align-content: flex-start;
         align-items: center;
@@ -170,37 +179,37 @@ body {
         background-color: rgb(249, 252, 255);
     }
 
-    #featuresBase p{
-        font-size: 1rem;
-    }
-
     #featuresBase img{
-        flex-grow: 1;
+        justify-content: flex-start;
         max-width:100%;
-        object-fit: contain;
         flex-direction: column;
         border-radius: 5px;
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        margin-bottom: 16px;
+        margin-bottom: 0.2rem;
+        flex-grow: 1;
+    }
+
+    #featuresBase p{
+        font-size: 1rem;
     }
 
     #download>#dlBack {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
-        width: 800px;
-        height: 308px;
+        width: 90%;
+        height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
-        border-radius: 10px;
         z-index: 0;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
         justify-content: center;
+        border-radius: 5px;
     }
 
     #download>#dlBack:before{
@@ -216,7 +225,7 @@ body {
     }
 
     .dlBtn {
-        width: 540px;
+        width: 66%;
         height: 70px;
         padding: 0.5rem;
         background-color: rgba(0, 0, 0, 0.7);
@@ -233,7 +242,7 @@ body {
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    .dlBtn>p {
+    #dlBack>.dlBtn>p {
         font-size: 2rem;
     }
 
@@ -241,17 +250,21 @@ body {
         display: flex;
         align-items: baseline;
         color: rgb(255, 255, 255);
+        transform: scale(0.8);
+        letter-spacing: 0;
+        font-size: 1.3rem;
     }
 
     #dlBack>a {
         color: rgb(255, 255, 255);
+        transform: scale(0.8);
     }
 
-    #downloadlist>#downloadlistitem {
+    #downloadlist>.download>.downloadlistitem {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
-        width: auto;
+        width: 70%;
         height: auto;
         background-color: rgb(249, 252, 255);
         background-size: cover;
@@ -264,18 +277,23 @@ body {
         border-radius: 5px;
     }
 
-    table td{
-        text-align: center;
-        vertical-align:middle;
-        width: 50%;
+    #downloadlist>.download>.downloadlistitem h3{
+        margin-top: 0px;
     }
 
-    #downloadlistBtn {
-        width: 270px;
-        height: 80%;
+    table td{
+        vertical-align:middle;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .downloadlistBtn {
+        width: 240px;
+        height: 50%;
         padding: 0.5rem;
-        margin: 2%;
-        background-color: rgba(0, 0, 0, 0.7);
+        margin: 2% auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
         color: rgb(245, 245, 245) !important;
         display: flex;
         align-items: center;
@@ -284,13 +302,13 @@ body {
         border-radius: 500px;
     }
 
-    #downloadlistBtn>img {
-        width: 3rem;
+    .downloadlistBtn>img {
+        width: 2.4rem;
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    #downloadlistBtn>p {
-        font-size: 2rem;
+    .downloadlistBtn>p {
+        font-size: 1.8rem;
     }
 
     #dlBack>p {
@@ -433,6 +451,7 @@ body {
         letter-spacing: 0.02rem;
         line-height: 1.6rem;
         list-style-position: inside;
+        text-indent: -1.4em;
     }
 
     /* フッター */
@@ -465,7 +484,7 @@ body {
     /* メインページ */
 
     #hero>img {
-        width: 750px;
+        max-width:100%;
     }
 
     #featuresBase {
@@ -594,13 +613,15 @@ body {
     table td{
         vertical-align:middle;
         width: 50%;
+        margin: auto;
+        text-align: center;
     }
 
     .downloadlistBtn {
         width: 240px;
         height: 50%;
         padding: 0.5rem;
-        margin: 2%;
+        margin: 2% auto 2% auto;
         background-color: rgba(20, 30, 40, 0.8);
         color: rgb(245, 245, 245) !important;
         display: flex;
@@ -759,10 +780,19 @@ body {
 
     #content h2 {
         font-size: 1.8rem;
-        margin: auto auto;
+        margin-top: 1.4rem;
     }
 
     #content h2:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    #content h3 {
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
+    }
+
+    #content h3:not(:first-child) {
         margin-top: 1rem;
     }
 
@@ -774,7 +804,7 @@ body {
     }
 
     #content a {
-        color: rgb(70, 70, 70);
+        color: rgb(20, 30, 100);
     }
 
     #content ul li {
@@ -783,6 +813,7 @@ body {
         letter-spacing: 0.02rem;
         line-height: 1.6rem;
         list-style-position: inside;
+        text-indent: -1.4em;
     }
 
     /* フッター */
@@ -809,13 +840,13 @@ body {
     }
 
     #footContent a {
-        color: rgb(40, 40, 40);
+        color: rgb(20, 30, 40);
     }
 
     /* メインページ */
 
     #hero>img {
-        width: 100%;
+        max-width:100%;
     }
 
     #featuresBase {
@@ -825,10 +856,10 @@ body {
     }
 
     .featuresTiles {
-        width: 28rem;
+        width: 22rem;
         display: flex;
         justify-content: center;
-        margin: 1rem auto;
+        margin: 1px auto 2rem auto;
         flex-direction: column;
         align-content: flex-start;
         align-items: center;
@@ -847,7 +878,8 @@ body {
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        margin-bottom: 16px;
+        margin-bottom: 0.2rem;
+        flex-grow: 1;
     }
 
     #featuresBase p{
@@ -858,8 +890,8 @@ body {
         position: relative;
         overflow: hidden;
         margin: 0.5rem auto;
-        width: 380px;
-        height: 146px;
+        width: 90%;
+        height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
         z-index: 0;
@@ -868,6 +900,7 @@ body {
         justify-content: space-evenly;
         flex-direction: column;
         justify-content: center;
+        border-radius: 5px;
     }
 
     #download>#dlBack:before{
@@ -883,9 +916,9 @@ body {
     }
 
     .dlBtn {
-        width: 540px;
-        height: 70px;
-        padding: 0.5rem;
+        width: 126%;
+        height: 100px;
+        padding: 0.2rem;
         background-color: rgba(0, 0, 0, 0.7);
         color: rgb(245, 245, 245);
         display: flex;
@@ -896,12 +929,77 @@ body {
     }
 
     .dlBtn>img {
-        width: 3rem;
+        width: 3.2rem;
         filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
-    .dlBtn>p {
-        font-size: 2rem;
+    #dlBack>.dlBtn>p {
+        font-size: 2.2rem;
+    }
+
+    #dlBack>p {
+        display: flex;
+        align-items: baseline;
+        color: rgb(255, 255, 255);
+        transform: scale(0.8);
+        letter-spacing: 0;
+        font-size: 1.3rem;
+    }
+
+    #dlBack>a {
+        color: rgb(255, 255, 255);
+        transform: scale(0.8);
+    }
+
+    #downloadlist>.download>.downloadlistitem {
+        position: relative;
+        overflow: hidden;
+        margin: 0.5rem auto;
+        width: auto;
+        height: auto;
+        background-color: rgb(249, 252, 255);
+        background-size: cover;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    #downloadlist>.download>.downloadlistitem h3{
+        margin-top: 0px;
+    }
+
+    table td{
+        vertical-align:middle;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .downloadlistBtn {
+        width: 220px;
+        height: 50%;
+        padding: 0.5rem;
+        margin: 2% auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
+
+    .downloadlistBtn>img {
+        width: 2.4rem;
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    }
+
+    .downloadlistBtn>p {
+        font-size: 1.8rem;
     }
 
     #dlBack>p {
