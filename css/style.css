@@ -18,7 +18,7 @@ header {
   background: #dce6f0;
 }
 #headContent {
-  width: 750px;
+  width: clamp(300px, 70%, 1000px);
   height: 100%;
   margin: auto auto;
 }
@@ -47,26 +47,94 @@ header {
   height: 100%;
   width: 50%;
 }
-#navigation>#menu>a:hover {
-  background-color: #f2f6fa;
-  color: #141e64;
+@media (max-width: 750px) {
+  #navigation>a>img {
+    width: 2.5rem;
+  }
+  #navigation a {
+    color: #141e28;
+    text-decoration: none;
+  }
+  #navigation>#menu>a:hover {
+    background-color: #f2f6fa;
+    color: #141e64;
+  }
+  #navigation>#menu>a {
+    padding: 1.2em;
+  }
+  #menu {
+    display: none !important;
+  }
+  #menuIcon {
+    font-size: 3rem;
+  }
+  .menuCheck {
+    display: none;
+  }
+  #HamburgMenuList {
+    display: none;
+  }
+  .menuCheck:checked ~ #HamburgMenuList {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 2.75rem;
+    top: 4rem;
+    background-color: #d2dce6;
+    -webkit-animation: 100ms fadeIn;
+            animation: 100ms fadeIn;
+    z-index: 9999;
+    border-radius: 5px;
+  }
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
-#navigation>#menu>a {
-  padding: 1.2em;
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
-#navigation>a>img {
-  width: 2.5rem;
 }
-#navigation a {
-  color: #141e28;
-  text-decoration: none;
-}
-#HamburgMenu {
-  display: none;
+@media screen and (min-width: 750px) {
+  #navigation>#menu>a:hover {
+    background-color: #f2f6fa;
+    color: #141e64;
+  }
+  #navigation>#menu>a {
+    padding: 1.2em;
+  }
+  #navigation>a>img {
+    width: 2.5rem;
+  }
+  #navigation a {
+    color: #141e28;
+    text-decoration: none;
+  }
+  #HamburgMenu {
+    display: none;
+  }
 }
 /* メインコンテンツ */
 #content {
-  width: 750px;
+  width: clamp(300px, 70%, 1000px);
   margin: 1rem auto;
 }
 #content>section {
@@ -113,8 +181,9 @@ footer {
   height: 4rem;
   background: #dce6f0;
 }
+@if (device-width) {}
 #footContent {
-  width: 750px;
+  width: clamp(300px, 70%, 1000px);
   height: 100%;
   margin: auto auto;
   display: -webkit-box;
@@ -137,7 +206,7 @@ footer {
 }
 /* メインページ */
 #hero>img {
-  width: 750px;
+  width: 100%;
 }
 #featuresBase {
   display: -webkit-box;
