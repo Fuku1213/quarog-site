@@ -114,7 +114,7 @@ header {
     }
 }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   #navigation>#menu>a:hover {
     background-color: #f2f6fa;
     color: #141e64;
