@@ -131,7 +131,7 @@ body {
 
     footer {
         width: 100%;
-        height: 4rem;
+        height: 6rem;
         background: rgb(220, 230, 240);
     }
 
@@ -205,6 +205,7 @@ body {
         height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
+        background-position: center;
         z-index: 0;
         display: flex;
         align-items: center;
@@ -481,7 +482,7 @@ body {
 
     footer {
         width: 100%;
-        height: 4rem;
+        height: 6rem;
         background: rgb(220, 230, 240);
     }
 
@@ -555,6 +556,7 @@ body {
         height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
+        background-position: center;
         z-index: 0;
         display: flex;
         align-items: center;
@@ -865,7 +867,7 @@ body {
 
     footer {
         width: 100%;
-        height: 4rem;
+        height: 6rem;
         background: rgb(220, 230, 240);
     }
 
@@ -939,6 +941,7 @@ body {
         height: 240px;
         background-image: url(../img/hero.png);
         background-size: cover;
+        background-position: center;
         z-index: 0;
         display: flex;
         align-items: center;
