@@ -118,12 +118,14 @@ body {
 
     #content ul li {
         font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
+        margin: 0.3rem 0.2rem;
+        margin-left: 1.6rem;
+        letter-spacing: 0.01rem;
         line-height: 1.6rem;
         list-style-position: inside;
-        text-indent: -1.4em;
+        text-indent: -1.0rem;
     }
+
 
     /* フッター */
 
@@ -143,7 +145,7 @@ body {
     }
 
     #footContent>p {
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.02rem;
         line-height: 1.5rem;
         text-align: center;
     }
@@ -324,6 +326,25 @@ body {
         transform: scale(0.8);
     }
 
+    .maindlBtn {
+        width: 40%;
+        height: 50%;
+        padding: 0.5rem;
+        margin: auto auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
+
+    .maindlBtn>img {
+        width: 2.4rem;
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    }
+
     /* Othersページ */
 
     #organization>ul {
@@ -334,10 +355,11 @@ body {
 
     #organization>ul>li {
         width: 46%;
+        margin-left: 1.0rem;
     }
 
     #organization>ul>li:not(:last-child) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.4rem;
     }
 
     #organization>p {
@@ -447,11 +469,12 @@ body {
 
     #content ul li {
         font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
+        margin: 0.3rem 0.2rem;
+        margin-left: 1.6rem;
+        letter-spacing: 0.01rem;
         line-height: 1.6rem;
         list-style-position: inside;
-        text-indent: -1.4em;
+        text-indent: -1.0rem;
     }
 
     /* フッター */
@@ -472,7 +495,7 @@ body {
     }
 
     #footContent>p {
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.02rem;
         line-height: 1.5rem;
         text-align: center;
     }
@@ -653,6 +676,25 @@ body {
         transform: scale(0.8);
     }
 
+    .maindlBtn {
+        width: 56%;
+        height: 50%;
+        padding: 0.5rem;
+        margin: auto auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
+
+    .maindlBtn>img {
+        width: 2.4rem;
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    }
+
     /* Othersページ */
 
     #organization>ul {
@@ -662,7 +704,8 @@ body {
     }
 
     #organization>ul>li {
-        width: 70%;
+        width: 100%;
+        margin-left: 1.6rem;
     }
 
     #organization>ul>li:not(:last-child) {
@@ -744,7 +787,8 @@ body {
     .menuCheck:checked ~ #HamburgMenuList {
         position: absolute;
         right: 0px;
-        width: 50%;
+        width: 40%;
+        font-size: 1.4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -809,11 +853,12 @@ body {
 
     #content ul li {
         font-size: 1.2rem;
-        margin: 0.5rem 1.0rem;
-        letter-spacing: 0.02rem;
+        margin: 0.3rem 0.2rem;
+        margin-left: 1.6rem;
+        letter-spacing: 0.01rem;
         line-height: 1.6rem;
         list-style-position: inside;
-        text-indent: -1.4em;
+        text-indent: -1.0rem;
     }
 
     /* フッター */
@@ -834,7 +879,7 @@ body {
     }
 
     #footContent>p {
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.02rem;
         line-height: 1.5rem;
         text-align: center;
     }
@@ -1014,6 +1059,25 @@ body {
     #dlBack>a {
         color: rgb(255, 255, 255);
         transform: scale(0.6);
+    }
+
+    .maindlBtn {
+        width: 88%;
+        height: 50%;
+        padding: 0.5rem;
+        margin: auto auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
+
+    .maindlBtn>img {
+        width: 2.4rem;
+        filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
     }
 
     /* Othersページ */
