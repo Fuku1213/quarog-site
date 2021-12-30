@@ -72,35 +72,42 @@
             <div class="precautions">
                 <h3>注意事項</h3>
                 <ul>
-                    <li>Quarogはクローズドソフトウェアです</li>
-                    <li>Quarogの再配布及びデコンパイルは<b>一切禁止</b>とさせていただきます</li>
-                    <li>Quarog内で扱われる緊急地震速報は様々な特性を持っています。それを理解した上でご利用ください。<a href="https://www.data.jma.go.jp/svd/eew/data/nc/">緊急地震速報について</a></li>
+                    <li>Quarogで扱われる緊急地震速報は様々な特性を持っています。それを理解した上でご利用ください。<a
+                            href="https://www.data.jma.go.jp/svd/eew/data/nc/">緊急地震速報について</a></li>
+                    <li>不具合等でQuarogから情報を提供できなくなる可能性があります。そのため、複数の情報ソースと併用するようにしてください。</li>
+                    <li>Quarogはクローズドソースです。</li>
+                    <li>Quarogの再配布及びデコンパイルは<b>一切禁止</b>とさせていただきます。</li>
                     <li>Quarogによって発生したいかなる免責も負いかねます。</li>
                 </ul>
             </div>
             <div class="download">
                 <h3>ダウンロード</h3>
-                    <p><b>公開中のバージョン</b>：Ver 1.0.0</p>
-                    <p><b>公開日</b>：2021/12/??</p>
+                <p><b>公開中のバージョン</b>：Ver 1.0.0</p>
+                <p><b>公開日</b>：2021/12/??</p>
                 <div class="downloadlistitem">
-                <table width="90%" > 
-                    <tr>
-                        <td> <h3>Quarog without Runtime</h3> </td>
-                        <td> <a class="downloadlistBtn" href="./">
-                            <img src="./img/logo.png">
-                            <p>Download</p>
-                            </a> </td>
-                    </tr>
-                </table>
-                <p class="comments"><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/5.0">.NET 5 Runtime(x64)</a>が必要です</p>
+                    <table width="90%">
+                        <tr>
+                            <td>
+                                <h3>Quarog without Runtime</h3>
+                            </td>
+                            <td> <a class="downloadlistBtn" href="./">
+                                    <img src="./img/logo.png" alt="Quarogロゴ">
+                                    <p>Download</p>
+                                </a> </td>
+                        </tr>
+                    </table>
+                    <p class="comments"><a href="https://dotnet.microsoft.com/ja-jp/download/dotnet/5.0">.NET 5
+                            Runtime(x64)</a>が必要です</p>
                 </div>
                 <div class="downloadlistitem">
-                    <table width="90%"> 
+                    <table width="90%">
                         <tr>
-                            <td> <h3>Quarog Runtime-merged</h3> </td>
+                            <td>
+                                <h3>Quarog Runtime-merged</h3>
+                            </td>
                             <td> <a class="downloadlistBtn" href="./">
-                                <img src="./img/logo.png">
-                                <p>Download</p>
+                                    <img src="./img/logo.png" alt="Quarogロゴ">
+                                    <p>Download</p>
                                 </a> </td>
                         </tr>
                     </table>
@@ -115,13 +122,14 @@
 
     <footer>
         <div id="footContent">
-            <p>© 2021 Quarog - All rights reserved.<br><a href="https://twitter.com/fuku121303">@fuku121303</a>, Website by <a href="https://twitter.com/Yakijake_852">@Yakijake_852</a></p>
+            <p>© 2021 Quarog - All rights reserved.<br><a href="https://twitter.com/fuku121303">@fuku121303</a>, Website
+                by <a href="https://twitter.com/Yakijake_852">@Yakijake_852</a></p>
         </div>
     </footer>
 </body>
 
 <script>
-    $(function() {
+    $(function () {
         $.ajax({
             url: "./update.json",
             type: "GET",
@@ -129,10 +137,10 @@
         }).done((data) => {
             for (let i = 0; i < data.history.length; i++) {
                 let newer = "",
-                change = "",
-                fix = "",
-                important = "",
-                other = "";
+                    change = "",
+                    fix = "",
+                    important = "",
+                    other = "";
 
                 // 更新内容 - 追加
                 if (data.history[i].cont.new.length > 0) {
