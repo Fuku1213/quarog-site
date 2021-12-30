@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(240, 245, 250);
+    color: rgb(20, 30, 40);
+    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI",  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.material-icons-outlined {
+    font-family: "Material Icons";
+}
+
+/* ヘッダー */
+
+header {
+    width: 100%;
+    height: 4rem;
+    background: rgb(220, 230, 240);
+}
+
+#headContent {
+    width: clamp(300px, 95%, 1000px);
+    height: 100%;
+    margin: auto auto;
+}
+
+#navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+#navigation>#menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+}
+
+@media (max-width: 750px) {
+    #navigation>a>img {
+        width: 2.5rem;
+    }
+
+    #navigation a {
+        color: rgb(20, 30, 40);
+        text-decoration: none; 
+    }
+
+    #navigation>#menu>a:hover {
+        background-color: rgb(242, 246, 250);
+        color: rgb(20, 30, 100);
+    } 
+
+    #navigation>#menu>a{
+        padding: 1.2em;
+    }
+
+
+    #menu {
+        display: none !important;
+    }
+
+    #menuIcon {
+        font-size: 3rem;
+    }
+
+    .menuCheck {
+        display: none;
+    }
+
+    #HamburgMenuList {
+        display: none;
+    }
+
+    .menuCheck:checked ~ #HamburgMenuList {
+        position: absolute;
+        right: 0px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2.75rem;
+        top: 4rem;
+        background-color: rgb(210, 220, 230);
+        animation: 100ms fadeIn;
+        z-index: 9999;
+        border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 751px) {
+    #navigation>#menu>a:hover {
+        background-color: rgb(242, 246, 250);
+        color: rgb(20, 30, 100);
+    }
+
+    #navigation>#menu>a{
+        padding: 1.2em;
+    }
+
+    #navigation>a>img {
+        width: 2.5rem;
+    }
+
+    #navigation a {
+        color: rgb(20, 30, 40);
+        text-decoration: none; 
+    }
+
+    #HamburgMenu {
+        display: none;
+    }
+}
+
+/* メインコンテンツ */
+#content {
+    width: clamp(300px, 95%, 1000px);
+    margin: 1rem auto;
+}
+
+#content>section {
+    margin: 1rem auto;
+}
+
+#content h1 {
+    font-size: 2rem;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+#content h2 {
+    font-size: 1.8rem;
+    margin-top: 1.4rem;
+}
+
+#content h2:not(:first-child) {
+    margin-top: 1rem;
+}
+
+#content h3 {
+    font-size: 1.4rem;
+    margin-top: 1.7rem;
+}
+
+#content h3:not(:first-child) {
+    margin-top: 1rem;
+}
+
+#content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.75rem;
+}
+
+#content a {
+    color: rgb(20, 30, 100);
+}
+
+#content ul li {
+    font-size: 1.2rem;
+    margin: 0.3rem 0.2rem;
+    margin-left: 1.6rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.6rem;
+    list-style-position: inside;
+    text-indent: -1.0rem;
+}
+
+/* フッター */
+
+footer {
+    width: 100%;
+    height: 6rem;
+    background: rgb(220, 230, 240);
+}
+
+#footContent {
+    width: clamp(300px, 95%, 1000px);
+    height: 100%;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footContent>p {
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+#footContent a {
+    color: rgb(20, 30, 40);
+}
+
+/* メインページ */
+#hero>img {
+    width: 100%
+}
+
+#featuresBase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.featuresTiles {
+    width: 29rem;
+    display: flex;
+    justify-content: center;
+    margin: 1px auto 2rem auto;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: rgb(249, 252, 255);
+}
+
+#featuresBase img {
+    justify-content: flex-start;
+    max-width: 100%;
+    flex-direction: column;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0.2rem;
+    flex-grow: 1;
+}
+
+#featuresBase p {
+    font-size: 1rem;
+}
+
+#download>#dlBack {
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem auto;
+    width: clamp(300px, 95%, 700px);
+    height: 240px;
+    background-image: url(../img/hero.png);
+    background-size: cover;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#download>#dlBack:before{
+    content: "";
+    background: inherit;
+    filter: blur(10px) brightness(60%) contrast(90%);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+}
+
+.dlBtn {
+    width: 84%;
+    height: 70px;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    border-radius: 500px;
+}
+
+.dlBtn>img {
+    width: 3rem;
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
+
+#dlBack>.dlBtn>p {
+    font-size: 2rem;
+}
+
+#dlBack>p {
+    display: flex;
+    align-items: baseline;
+    color: rgb(255, 255, 255);
+    //transform: scale(0.8);
+    letter-spacing: 0;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+#dlBack>a {
+    color: rgb(255, 255, 255);
+    //transform: scale(0.8);
+}
+
+@media screen and (max-width: 570px) {
+    #dlText_Desktop {
+        display: none;
+    }
+
+    #dlText_Mobile {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 571px) {
+    #dlText_Desktop {
+        display: flex;
+    }
+
+    #dlText_Mobile {
+        display: none;
+    }
+}
+
+#downloadlist>.download>.downloadlistitem {
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem auto;
+    max-width: 70%;
+    height: auto;
+    background-color: rgb(249, 252, 255);
+    background-size: cover;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#downloadlist>.download>.downloadlistitem h3 {
+    margin-top: 0px;
+}
+
+table td {
+    vertical-align: middle;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.downloadlistBtn {
+    width: 240px;
+    height: 50%;
+    padding: 0.5rem;
+    margin: 2% auto 2% auto;
+    background-color: rgba(20, 30, 40, 0.8);
+    color: rgb(245, 245, 245) !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    border-radius: 500px;
+}
+
+.downloadlistBtn>img {
+    width: 2.4rem;
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
+
+.downloadlistBtn>p {
+    font-size: 1.8rem;
+}
+
+#dlBack>p {
+    display: flex;
+    align-items: baseline;
+    color: rgb(255, 255, 255);
+    transform: scale(0.8);
+    letter-spacing: 0;
+}
+
+#dlBack>a {
+    color: rgb(255, 255, 255);
+    transform: scale(0.8);
+}
+
+.maindlBtn {
+    width: 40%;
+    height: 50%;
+    padding: 0.5rem;
+    margin: auto auto 2% auto;
+    background-color: rgba(20, 30, 40, 0.8);
+    color: rgb(245, 245, 245) !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    border-radius: 500px;
+}
+
+.maindlBtn>img {
+    width: 2.4rem;
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+}
+
+/* Othersページ */
+#organization>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#organization>ul>li {
+    width: 46%;
+    margin-left: 1.0rem;
+}
+
+#organization>ul>li:not(:last-child) {
+    margin-bottom: 1.4rem;
+}
+
+#organization>p {
+    text-align: right;
+}
