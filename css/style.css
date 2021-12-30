@@ -78,7 +78,7 @@ header {
   .menuCheck:checked ~ #HamburgMenuList {
     position: absolute;
     right: 0px;
-    width: 50%;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
