@@ -78,7 +78,7 @@ header {
   .menuCheck:checked ~ #HamburgMenuList {
     position: absolute;
     right: 0px;
-    width: 40%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -394,14 +394,17 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 #downloadlist>.download>.downloadlistitem h3 {
   margin-top: 0px;
 }
-table td {
+.downloadlistitem>div {
   vertical-align: middle;
-  width: 50%;
-  margin: auto;
+  margin: auto auto auto auto;
   text-align: center;
 }
 .downloadlistBtn {
