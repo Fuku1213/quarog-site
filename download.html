@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarog - Download</title>
+    <link rel="canonical" href="https://fuku1213.github.io/software-quarog/">
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/destyle.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/update-history.js"></script>
     <!-- 検索エンジンに表示するため -->
     <meta name="author" content="Fuku121303">
     <meta name="description" content="Windows向けソフトウェア、Quarogの配布サイトです。">
@@ -25,48 +27,23 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@fuku121303">
     <meta name="twitter:creator" content="@fuku121303">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHCZ3090P3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-QHCZ3090P3');
-    </script>    
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-QHCZ3090P3");
+    </script>
 </head>
 
 <body>
-    <header>
-        <div id="headContent">
-            <div id="navigation">
-                <a href="./">
-                    <img src="./img/logo.png" alt="Quarogロゴ">
-                </a>
-                <div id="menu">
-                    <a href="./">Home</a>
-                    <a href="./#features">Features</a>
-                    <a href="./download.html">Download</a>
-                    <a href="./others.html">Others</a>
-                </div>
-                <div id="HamburgMenu">
-                    <div id="HamburgMenuIcon">
-                        <label id="menuIcon" class="material-icons-outlined" for="hamburgMenuCheck">
-                            menu
-                        </label>
-                        <input id="hamburgMenuCheck" type="checkbox" class="menuCheck">
-                        <div id="HamburgMenuList">
-                            <a href="./">Home</a>
-                            <a href="./#features">Features</a>
-                            <a href="./download.html">Download</a>
-                            <a href="./others.html">Others</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <!--#include file="./header.html" -->
     <div id="content">
         <section id="downloadlist">
             <h2>Download</h2>
@@ -87,7 +64,8 @@
                     <li>Quarogはクローズドソースです。</li>
                     <li>Quarogの再配布及びデコンパイルは<b>一切禁止</b>とさせていただきます。</li>
                     <li>Quarogによって発生したいかなる免責も負いかねます。</li>
-                    <li>配信・動画公開など、第三者に向けて情報を発信するためにQuarogを利用する場合、「色の設定」の配色について、「デフォルト配色」として最初からプリセットとして用意されている配色<strong>以外</strong>のものを使用し、他のサービスやソフト等で利用されている配色と同じ配色を利用する場合については、そのサービス等が配色の利用を認めている場合のみ利用するようお願いします。なお、個人的に利用する(他者への情報提供や、第三者への公開を目的としない)場合や、オリジナルの配色で第三者に向けて情報を発信する場合についてはこの制限は設けないものとします。</li>
+                    <li>配信・動画公開など、第三者に向けて情報を発信するためにQuarogを利用する場合、「色の設定」の配色について、「デフォルト配色」として最初からプリセットとして用意されている配色<strong>以外</strong>のものを使用し、他のサービスやソフト等で利用されている配色と同じ配色を利用する場合については、そのサービス等が配色の利用を認めている場合のみ利用するようお願いします。なお、個人的に利用する(他者への情報提供や、第三者への公開を目的としない)場合や、オリジナルの配色で第三者に向けて情報を発信する場合についてはこの制限は設けないものとします。
+                    </li>
                 </ul>
             </div>
             <div class="download">
@@ -128,107 +106,7 @@
             <h3>アップデート履歴</h3>
         </section>
     </div>
-
-    <footer>
-        <div id="footContent">
-            <p>© 2022 Quarog - All rights reserved.<br><a href="https://twitter.com/fuku121303">@fuku121303</a>, Website
-                by <a href="https://twitter.com/Yakijake_852">@Yakijake_852</a></p>
-        </div>
-    </footer>
+    <!--#include file="./footer.html" -->
 </body>
-
-<script>
-    $(function () {
-        $.ajax({
-            url: "./update.json",
-            type: "GET",
-            dataType: "json",
-        }).done((data) => {
-            for (let i = 0; i < data.history.length; i++) {
-                let newer = "",
-                    change = "",
-                    fix = "",
-                    important = "",
-                    other = "";
-
-                // 更新内容 - 追加
-                if (data.history[i].cont.new.length > 0) {
-                    let cache = "";
-                    let length = data.history[i].cont.new.length;
-                    for (let j = 0; j < length; j++) {
-                        cache += `<li>${data.history[i].cont.new[j]}</li>`;
-                    }
-                    newer = `<li><b>追加</b><ul>${cache}</ul></li>`;
-                } else {
-                    newer = ``;
-                }
-
-                // 更新内容 - 変更
-                if (data.history[i].cont.change.length > 0) {
-                    let cache = "";
-                    let length = data.history[i].cont.change.length;
-                    for (let j = 0; j < length; j++) {
-                        cache += `<li>${data.history[i].cont.change[j]}</li>`;
-                    }
-                    change = `<li><b>変更</b><ul>${cache}</ul></li>`;
-                } else {
-                    change = ``;
-                }
-
-                // 更新内容 - 修正
-                if (data.history[i].cont.fix.length > 0) {
-                    let cache = "";
-                    let length = data.history[i].cont.fix.length;
-                    for (let j = 0; j < length; j++) {
-                        cache += `<li>${data.history[i].cont.fix[j]}</li>`;
-                    }
-                    fix = `<li><b>修正</b><ul>${cache}</ul></li>`;
-                } else {
-                    fix = ``;
-                }
-
-                // 更新内容 - 重要
-                if (data.history[i].cont.important.length > 0) {
-                    let cache = "";
-                    let length = data.history[i].cont.important.length;
-                    for (let j = 0; j < length; j++) {
-                        cache += `<li>${data.history[i].important.fix[j]}</li>`;
-                    }
-                    important = `<li><b>重要</b><ul>${cache}</ul></li>`;
-                } else {
-                    important = ``;
-                }
-
-                // 更新内容 - その他
-                if (data.history[i].cont.other.length > 0) {
-                    let cache = "";
-                    let length = data.history[i].cont.other.length;
-                    for (let j = 0; j < length; j++) {
-                        cache += `<li>${data.history[i].other.fix[j]}</li>`;
-                    }
-                    other = `<li><b>その他</b><ul>${cache}</ul></li>`;
-                } else {
-                    other = ``;
-                }
-
-                $("#updateLog").append(
-                    `<ul>
-                        <li><b style="font-size: 1.4rem;">Ver. ${data.history[i].ver} - ${data.history[i].date}</b>
-                            <ul>
-                                ${important}
-                                ${newer}
-                                ${change}
-                                ${fix}
-                                ${other}
-                            </ul>
-                        </li>
-                    </ul>`
-                );
-            }
-        }).fail((error) => {
-            console.log(error);
-        });
-    });
-</script>
 
 </html>
