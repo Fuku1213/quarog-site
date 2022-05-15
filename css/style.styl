@@ -47,28 +47,30 @@ header {
     }
 }
 
+// スマホ向け
 @media (max-width: 750px) {
-    #navigation>a>img {
-        width: 2.5rem;
-    }
+    #navigation {
+        a {
+            color: rgb(20, 30, 40);
+            text-decoration: none;
 
-    #navigation a {
-        color: rgb(20, 30, 40);
-        text-decoration: none;
-    }
+            img {
+                width: 2.5rem;
+            }
+        }
 
-    #navigation>#menu>a:hover {
-        background-color: rgb(242, 246, 250);
-        color: rgb(20, 30, 100);
-    }
+        #menu {
+            display: none !important;
 
-    #navigation>#menu>a {
-        padding: 1.2em;
-    }
+            a {
+                padding: 1.2em;
 
-
-    #menu {
-        display: none !important;
+                &:hover {
+                    background-color: rgb(242, 246, 250);
+                    color: rgb(20, 30, 100);
+                }
+            }
+        }
     }
 
     #menu-icon {
@@ -109,23 +111,28 @@ header {
     }
 }
 
+// PC, タブレット向け
 @media screen and (min-width: 751px) {
-    #navigation>#menu>a:hover {
-        background-color: rgb(242, 246, 250);
-        color: rgb(20, 30, 100);
-    }
+    #navigation {
+        a {
+            color: rgb(20, 30, 40);
+            text-decoration: none;
 
-    #navigation>#menu>a {
-        padding: 1.2em;
-    }
+            img {
+                width: 2.5rem;
+            }
+        }
 
-    #navigation>a>img {
-        width: 2.5rem;
-    }
+        #menu {
+            a {
+                padding: 1.2em;
 
-    #navigation a {
-        color: rgb(20, 30, 40);
-        text-decoration: none;
+                &:hover {
+                    background-color: rgb(242, 246, 250);
+                    color: rgb(20, 30, 100);
+                }
+            }
+        }
     }
 
     #hamburg-menu {
@@ -133,59 +140,59 @@ header {
     }
 }
 
-/* メインコンテンツ */
+// *.html | メインコンテンツ部
 #content {
     width: clamp(300px, 95%, 1000px);
     margin: 1rem auto;
-}
 
-#content>section {
-    margin: 1rem auto;
-}
+    section {
+        margin: 1rem auto;
+    }
 
-#content h1 {
-    font-size: 2.5rem;
-    margin: 20px 20px;
-    text-align: center;
-}
+    h1 {
+        font-size: 2.5rem;
+        margin: 20px 20px;
+        text-align: center;
+    }
 
-#content h2 {
-    font-size: 1.8rem;
-    margin-top: 1.4rem;
-}
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 1.4rem;
 
-#content h2:not(:first-child) {
-    margin-top: 1rem;
-}
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
 
-#content h3 {
-    font-size: 1.4rem;
-    margin-top: 1.7rem;
-}
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
 
-#content h3:not(:first-child) {
-    margin-top: 1rem;
-}
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
+    }
 
-#content p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0.5rem;
-    letter-spacing: 0.02rem;
-    line-height: 1.75rem;
-}
+    p {
+        font-size: 1.2rem;
+        margin: 0.5rem 0.5rem;
+        letter-spacing: 0.02rem;
+        line-height: 1.75rem;
+    }
 
-#content a {
-    color: rgb(20, 30, 100);
-}
+    a {
+        color: rgb(20, 30, 100);
+    }
 
-#content ul li {
-    font-size: 1.2rem;
-    margin: 0.3rem 0.2rem;
-    margin-left: 1.6rem;
-    letter-spacing: 0.01rem;
-    line-height: 1.6rem;
-    list-style-position: inside;
-    text-indent: -1.0rem;
+    ul li {
+        font-size: 1.2rem;
+        margin: 0.3rem 0.2rem;
+        margin-left: 1.6rem;
+        letter-spacing: 0.01rem;
+        line-height: 1.6rem;
+        list-style-position: inside;
+        text-indent: -1.0rem;
+    }
 }
 
 // footer.html | フッター部
@@ -426,17 +433,65 @@ footer {
     filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
 }
 
-/* Othersページ */
-#organization>ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+// other.html | その他部
+@media screen and (max-width: 750px) {
+    #organization>ul {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        li {
+            margin-left: 1.0rem;
+        }
+    }
 }
 
-#organization>ul>li {
-    margin-left: 1.0rem;
+@media screen and (min-width: 751px) {
+    #organization>ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-    &:not(:last-child) {
-        margin-bottom: 1.4rem;
+        li {
+            margin-left: 1.0rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1.4rem;
+            }
+
+            &:nth-child(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+
+            &:nth-child(2) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            &:nth-child(3) {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+
+            &:nth-child(4) {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            &:nth-child(5) {
+                grid-column: 1 / 2;
+                grid-row: 3 / 5;
+            }
+
+            &:nth-child(6) {
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+            }
+
+            &:nth-child(7) {
+                grid-column: 2 / 3;
+                grid-row: 4 / 5;
+            }
+        }
     }
 }
 
