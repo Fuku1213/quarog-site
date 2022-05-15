@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Quarog - Home</title>
+    <title>Quarog - Terms</title>
+    <link rel="canonical" href="https://fuku1213.github.io/software-quarog/">
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/destyle.css">
     <link rel="stylesheet" href="./css/style.css">
-    <!-- 検索エンジンに表示するため -->
-    <meta name="author" content="Fuku121303">
-    <meta name="description" content="Windows向けソフトウェア、Quarogの配布サイトです。">
-    <meta name="keywords" content="Fuku121303,Quarog,地震,緊急地震速報,EEW,地震ソフト">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/loaded-common-contents.js"></script>
     <!-- OGP リンク共有時のサムネイル -->
     <meta property="og:title" content="Quarog - ホーム">
     <meta property="og:site_name" content="Quarog">
@@ -24,73 +23,76 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@fuku121303">
     <meta name="twitter:creator" content="@fuku121303">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHCZ3090P3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-QHCZ3090P3');
-    </script>    
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-QHCZ3090P3");
+    </script>
 </head>
 
 <body>
-    <header>
-        <div id="headContent">
-            <div id="navigation">
-                <a href="./">
-                    <img src="./img/logo.png" alt="Quarogロゴ">
-                </a>
-                <div id="menu">
-                    <a href="./">Home</a>
-                    <a href="./#features">Features</a>
-                    <a href="./download.html">Download</a>
-                    <a href="./others.html">Others</a>
-                </div>
-                <div id="HamburgMenu">
-                    <div id="HamburgMenuIcon">
-                        <label id="menuIcon" class="material-icons-outlined" for="hamburgMenuCheck">
-                            menu
-                        </label>
-                        <input id="hamburgMenuCheck" type="checkbox" class="menuCheck">
-                        <div id="HamburgMenuList">
-                            <a href="./">Home</a>
-                            <a href="./#features">Features</a>
-                            <a href="./download.html">Download</a>
-                            <a href="./others.html">Others</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
+    <div id="header"></div>
     <div id="content">
-        <section id="terms">
-            <h2>利用規約</h2>
-            <ul>
-                <li>不具合等で当ソフトウェアから情報を提供できなくなる可能性があります。そのため、必ず複数の情報ソースと併用するようにしてください。</li>
-                <li>当ソフトウェアの解析及びデコンパイルは一切禁止とさせていただきます。</li>
-                <li>当ソフトウェアによって発生したいかなる免責も負いかねます。</li>
-            </ul>
-        </section>
-        <section id="policy">
-            <h2>プライバシーポリシー</h2>
-            <ul>
-                <li>ソフトウェア内の処理等で開発者が利用者の情報を収集することはありません。</li>
-                <li>当ホームページでは、各ページの利用状況などを収集する、Google Analytics を使用しており<a
-                        href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>に基づき、使用します。</li>
-            </ul>
-        </section>
-    </div>
+        <p id="terms">
+            <h1>利用規約</h1>
 
-    <footer>
-        <div id="footContent">
-            <p>© 2022 Quarog - All rights reserved.<br><a href="https://twitter.com/fuku121303">@fuku121303</a>, Website
-                by <a href="https://twitter.com/Yakijake_852">@Yakijake_852</a></p>
-        </div>
-    </footer>
+            <h2>第１条　利用規約への同意</h2>
+            <p>サービスを利用するにあたり、サービス利用者は利用規約に同意したものとみなします。</p>
+
+            <h2>第２条　用語の定義</h2>
+            <p>「Quarog」は、地震情報や緊急地震速報を提供するクローズドソースのソフトを指します。</p>
+
+            <h2>第３条　サービスの内容</h2>
+            <p>当サイトの定めるサービスの内容は、Quarogのダウンロードをし、利用すること（以下、当サービス）を指します。</p>
+
+            <h2>第４条　利用規約の変更</h2>
+            <p>当サイトの利用規約は、やむを得ない事情があり、かつ、変更後の内容が相当性があり、合理的である場合ではない限り、変更をしないものとします。なお、利用規約を変更をする際には、Twitter（@Fuku121303）や当サイトにて告知をし、変更後は変更日時の記載をするものとします。
+            </p>
+
+            <h2>第５条　権利の帰属</h2>
+            <p>Quarogの著作権はすべて@Fuku121303（以下、制作者）および製作者に帰属するものとします。</p>
+
+            <h2>第６条　禁止事項</h2>
+            <p>当サービスの利用にあたり、以下を禁止事項とします。また、利用者はこれを理解し、遵守した上で利用するものとします。</p>
+            <p>１．著作権を侵害する行為（Quarogの再配布及びデコンパイル）</p>
+            <p>２．法令の違反や、公序良俗に反するような行為</p>
+            <p>３．「色の設定」の配色について、「デフォルト配色」として最初からプリセットとして用意されている配色以外で、他のサービスやソフト等で利用を認められていない配色を利用する行為（なお、個人的に利用する（他者への情報提供や、第三者への公開を目的としない）場合や、オリジナルの配色で第三者に向けて情報を発信する場合についてはこの限りではありません。）
+            </p>
+            <p>４．リバースエンジニアリング、逆アセンブルを行う行為、その他の方法でソースコードを解読する行為</p>
+            <p>５．１～４のいずれかに該当する行為を援助または助長する行為</p>
+            <p>６．１～５に定める項目のほか、制作者が不適当と合理的に判断した行為</p>
+
+            <h2>第７条　禁止事項に違反した際の制裁措置</h2>
+            <p>禁止事項の違反が見られた場合は、違反の度合いや損害の大きさに応じて、当サービスの停止や違反者に対する法的措置などの制裁措置を講じるものとします。</p>
+
+            <h2>第８条　サービス提供の停止や終了</h2>
+            <p>第７条にかかわらず、製作者の都合により当サービスを一時停止や終了する場合があります。</p>
+
+            <h2>第９条　損害賠償</h2>
+            <p>制作者は、故意又は重大な過失がある場合を除き、当サービスの利用に起因して利用者が被った損害を賠償する責任を負わないものとします。</p>
+
+            <h2>第１０条　その他注意事項</h2>
+            <p>Quarogで扱われる緊急地震速報は様々な特性を持っており、利用者はそれを理解した上で利用するものとします。</p>
+            <p><a href="https://www.data.jma.go.jp/svd/eew/data/nc/">緊急地震速報について</a></p>
+            </section>
+            <section id="policy">
+                <h2>プライバシーポリシー</h2>
+                <ul>
+                    <li>ソフトウェア内の処理等で開発者が利用者の情報を収集することはありません。</li>
+                    <li>当ホームページでは、各ページの利用状況などを収集する、Google Analytics を使用しており<a
+                            href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>に基づき、使用します。</li>
+                </ul>
+            </section>
+    </div>
+    <div id="footer"></div>
 </body>
 
 </html>
