@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html {
@@ -11,13 +12,12 @@ body {
 .material-icons-outlined {
   font-family: "Material Icons";
 }
-/* ヘッダー */
 header {
   width: 100%;
   height: 4rem;
   background: #dce6f0;
 }
-#headContent {
+#head-contents {
   width: clamp(300px, 95%, 1000px);
   height: 100%;
   margin: auto auto;
@@ -35,7 +35,7 @@ header {
           justify-content: space-between;
   font-size: 1.2rem;
 }
-#navigation>#menu {
+#navigation #menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,16 +66,16 @@ header {
   #menu {
     display: none !important;
   }
-  #menuIcon {
+  #menu-icon {
     font-size: 3rem;
   }
-  .menuCheck {
+  .menu-check {
     display: none;
   }
-  #HamburgMenuList {
+  #hamburg-menu-list {
     display: none;
   }
-  .menuCheck:checked ~ #HamburgMenuList {
+  .menuCheck:checked~#hamburg-menu-list {
     position: absolute;
     right: 0px;
     width: 50%;
@@ -129,7 +129,7 @@ header {
     color: #141e28;
     text-decoration: none;
   }
-  #HamburgMenu {
+  #hamburg-menu {
     display: none;
   }
 }
@@ -142,7 +142,7 @@ header {
   margin: 1rem auto;
 }
 #content h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 20px 20px;
   text-align: center;
 }
@@ -178,13 +178,12 @@ header {
   list-style-position: inside;
   text-indent: -1rem;
 }
-/* フッター */
 footer {
   width: 100%;
   height: 6rem;
   background: #dce6f0;
 }
-#footContent {
+#foot-contents {
   width: clamp(300px, 95%, 1000px);
   height: 100%;
   margin: auto auto;
@@ -198,15 +197,14 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#footContent>p {
+#foot-contents p {
   letter-spacing: 0.02rem;
   line-height: 1.5rem;
   text-align: center;
 }
-#footContent a {
+#foot-contents a {
   color: #141e28;
 }
-/* メインページ */
 #hero>img {
   width: 100%;
 }
@@ -477,17 +475,12 @@ footer {
 }
 /* Othersページ */
 #organization>ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 #organization>ul>li {
-  width: 46%;
   margin-left: 1rem;
 }
 #organization>ul>li:not(:last-child) {

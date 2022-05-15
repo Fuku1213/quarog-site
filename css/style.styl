@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+// 必要なフォントを読み込む
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
@@ -8,22 +11,21 @@ html {
 body {
     background-color: rgb(240, 245, 250);
     color: rgb(20, 30, 40);
-    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI",  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "Heebo", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothicUI, "Yu Gothic UI", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .material-icons-outlined {
     font-family: "Material Icons";
 }
 
-/* ヘッダー */
-
+// header.html | ヘッダー部
 header {
     width: 100%;
     height: 4rem;
     background: rgb(220, 230, 240);
 }
 
-#headContent {
+#head-contents {
     width: clamp(300px, 95%, 1000px);
     height: 100%;
     margin: auto auto;
@@ -35,14 +37,14 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
-}
 
-#navigation>#menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-    width: 50%;
+    #menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        width: 50%;
+    }
 }
 
 @media (max-width: 750px) {
@@ -52,15 +54,15 @@ header {
 
     #navigation a {
         color: rgb(20, 30, 40);
-        text-decoration: none; 
+        text-decoration: none;
     }
 
     #navigation>#menu>a:hover {
         background-color: rgb(242, 246, 250);
         color: rgb(20, 30, 100);
-    } 
+    }
 
-    #navigation>#menu>a{
+    #navigation>#menu>a {
         padding: 1.2em;
     }
 
@@ -69,19 +71,19 @@ header {
         display: none !important;
     }
 
-    #menuIcon {
+    #menu-icon {
         font-size: 3rem;
     }
 
-    .menuCheck {
+    .menu-check {
         display: none;
     }
 
-    #HamburgMenuList {
+    #hamburg-menu-list {
         display: none;
     }
 
-    .menuCheck:checked ~ #HamburgMenuList {
+    .menuCheck:checked~#hamburg-menu-list {
         position: absolute;
         right: 0px;
         width: 50%;
@@ -100,6 +102,7 @@ header {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
@@ -112,7 +115,7 @@ header {
         color: rgb(20, 30, 100);
     }
 
-    #navigation>#menu>a{
+    #navigation>#menu>a {
         padding: 1.2em;
     }
 
@@ -122,10 +125,10 @@ header {
 
     #navigation a {
         color: rgb(20, 30, 40);
-        text-decoration: none; 
+        text-decoration: none;
     }
 
-    #HamburgMenu {
+    #hamburg-menu {
         display: none;
     }
 }
@@ -141,7 +144,7 @@ header {
 }
 
 #content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 20px 20px;
     text-align: center;
 }
@@ -185,34 +188,33 @@ header {
     text-indent: -1.0rem;
 }
 
-/* フッター */
-
+// footer.html | フッター部
 footer {
     width: 100%;
     height: 6rem;
     background: rgb(220, 230, 240);
 }
 
-#footContent {
+#foot-contents {
     width: clamp(300px, 95%, 1000px);
     height: 100%;
     margin: auto auto;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    p {
+        letter-spacing: 0.02rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    a {
+        color: rgb(20, 30, 40);
+    }
 }
 
-#footContent>p {
-    letter-spacing: 0.02rem;
-    line-height: 1.5rem;
-    text-align: center;
-}
-
-#footContent a {
-    color: rgb(20, 30, 40);
-}
-
-/* メインページ */
+// index.html | メインページ部
 #hero>img {
     width: 100%
 }
@@ -271,7 +273,7 @@ footer {
     border-radius: 5px;
 }
 
-#download>#dlBack:before{
+#download>#dlBack:before {
     content: "";
     background: inherit;
     filter: blur(10px) brightness(60%) contrast(90%);
@@ -426,18 +428,16 @@ footer {
 
 /* Othersページ */
 #organization>ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #organization>ul>li {
-    width: 46%;
     margin-left: 1.0rem;
-}
 
-#organization>ul>li:not(:last-child) {
-    margin-bottom: 1.4rem;
+    &:not(:last-child) {
+        margin-bottom: 1.4rem;
+    }
 }
 
 #organization>p {
