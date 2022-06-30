@@ -144,55 +144,55 @@ header {
 #content {
     width: clamp(300px, 95%, 1000px);
     margin: 1rem auto;
+}
 
-    section {
-        margin: 1rem auto;
+section:not(:first-child) {
+    margin: 1rem auto;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 1.4rem;
+
+    &:not(:first-child) {
+        margin-top: 1.9rem;
     }
+}
 
-    h1 {
-        font-size: 2.3rem;
-        margin: 20px 20px;
-        text-align: center;
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.7rem;
+
+    &:not(:first-child) {
+        margin-top: 1rem;
     }
+}
 
-    h2 {
-        font-size: 1.7rem;
-        margin-top: 1.4rem;
+p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0.5rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.75rem;
+}
 
-        &:not(:first-child) {
-            margin-top: 1.9rem;
-        }
-    }
+a {
+    color: rgb(20, 30, 100);
+}
 
-    h3 {
-        font-size: 1.4rem;
-        margin-top: 1.7rem;
-
-        &:not(:first-child) {
-            margin-top: 1rem;
-        }
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin: 0.5rem 0.5rem;
-        letter-spacing: 0.02rem;
-        line-height: 1.75rem;
-    }
-
-    a {
-        color: rgb(20, 30, 100);
-    }
-
-    ul li {
-        font-size: 1.2rem;
-        margin: 0.3rem 0.2rem;
-        margin-left: 1.6rem;
-        letter-spacing: 0.01rem;
-        line-height: 1.6rem;
-        list-style-position: inside;
-        text-indent: -1.0rem;
-    }
+ul li {
+    font-size: 1.2rem;
+    margin: 0.3rem 0.2rem;
+    margin-left: 1.6rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.6rem;
+    list-style-position: inside;
+    text-indent: -1.0rem;
 }
 
 // footer.html | フッター部
@@ -261,6 +261,38 @@ footer {
 
 #featuresBase p {
     font-size: 1rem;
+}
+
+#agreeTerms {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+
+    #terms {
+        background-color: rgba(240, 245, 250, 1);
+        width: 80%;
+        height: 80%;
+        margin: auto auto;
+        padding: 1rem;
+        overflow-y: scroll;
+    }
+
+    .downloadlistBtn {
+        width: 350px;
+        height: auto !important;
+        padding: 0.5rem;
+        margin: 2% auto 2% auto;
+        background-color: rgba(20, 30, 40, 0.8);
+        color: rgb(245, 245, 245) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-decoration: none;
+        border-radius: 500px;
+    }
 }
 
 #download>#dlBack {

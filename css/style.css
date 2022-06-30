@@ -137,38 +137,38 @@ header {
   width: clamp(300px, 95%, 1000px);
   margin: 1rem auto;
 }
-#content section {
+section:not(:first-child) {
   margin: 1rem auto;
 }
-#content h1 {
+h1 {
   font-size: 2.3rem;
   margin: 20px 20px;
   text-align: center;
 }
-#content h2 {
+h2 {
   font-size: 1.7rem;
   margin-top: 1.4rem;
 }
-#content h2:not(:first-child) {
+h2:not(:first-child) {
   margin-top: 1.9rem;
 }
-#content h3 {
+h3 {
   font-size: 1.4rem;
   margin-top: 1.7rem;
 }
-#content h3:not(:first-child) {
+h3:not(:first-child) {
   margin-top: 1rem;
 }
-#content p {
+p {
   font-size: 1.2rem;
   margin: 0.5rem 0.5rem;
   letter-spacing: 0.02rem;
   line-height: 1.75rem;
 }
-#content a {
+a {
   color: #141e64;
 }
-#content ul li {
+ul li {
   font-size: 1.2rem;
   margin: 0.3rem 0.2rem;
   margin-left: 1.6rem;
@@ -264,6 +264,41 @@ footer {
 }
 #featuresBase p {
   font-size: 1rem;
+}
+#agreeTerms {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 9999;
+}
+#agreeTerms #terms {
+  background-color: #f0f5fa;
+  width: 80%;
+  height: 80%;
+  margin: auto auto;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+#agreeTerms .downloadlistBtn {
+  width: 350px;
+  height: auto !important;
+  padding: 0.5rem;
+  margin: 2% auto 2% auto;
+  background-color: rgba(20,30,40,0.8);
+  color: #f5f5f5 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 500px;
 }
 #download>#dlBack {
   position: relative;
