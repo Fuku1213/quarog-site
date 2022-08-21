@@ -19,3 +19,9 @@ function downloadQuarog() {
         display: "none"
     });
 }
+
+function closeDownloadWindow() {
+    $("#agreeTerms").css({
+        display: "none"
+    });
+}

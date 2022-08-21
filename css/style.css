@@ -318,11 +318,23 @@ footer {
   list-style-position: inside;
   text-indent: -1rem;
 }
-#agreeTerms .downloadlistBtn {
+#agreeTerms #terms-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#agreeTerms #terms-btn .downloadlistBtn {
   width: 350px;
   height: auto !important;
   padding: 0.5rem;
-  margin: 2% auto 2% auto;
+  margin: 2%;
   background-color: rgba(20,30,40,0.8);
   color: #f5f5f5 !important;
   display: -webkit-box;
@@ -336,6 +348,9 @@ footer {
           justify-content: space-evenly;
   text-decoration: none;
   border-radius: 500px;
+}
+#agreeTerms #terms-btn #quarog-dl {
+  background-color: #3278d2;
 }
 #download>#dlBack {
   position: relative;
