@@ -52,7 +52,7 @@ $(() => {
                 let cache = "";
                 let length = data.history[i].cont.important.length;
                 for (let j = 0; j < length; j++) {
-                    cache += `<li>${data.history[i].important.fix[j]}</li>`;
+                    cache += `<li>${data.history[i].cont.fix[j]}</li>`;
                 }
                 important = `<li><b>重要</b><ul>${cache}</ul></li>`;
             } else {
@@ -64,7 +64,7 @@ $(() => {
                 let cache = "";
                 let length = data.history[i].cont.other.length;
                 for (let j = 0; j < length; j++) {
-                    cache += `<li>${data.history[i].other.fix[j]}</li>`;
+                    cache += `<li>${data.history[i].cont.other[j]}</li>`;
                 }
                 other = `<li><b>その他</b><ul>${cache}</ul></li>`;
             } else {
@@ -72,7 +72,8 @@ $(() => {
             }
 
             $("#updateLog").append(
-                `<ul>
+                `<h3>アップデート履歴</h3>
+                <ul>
                     <li><b style="font-size: 1.4rem;">Ver. ${data.history[i].ver} - ${data.history[i].date}</b>
                         <ul>
                             ${important}

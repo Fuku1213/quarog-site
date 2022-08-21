@@ -1,0 +1,18 @@
+{
+    "latest": {
+        "ver": "1.0.0",
+        "date": "2022年上半期",
+        "main": "正式版リリース"
+    },
+    "history": [{
+        "ver": "1.0.0",
+        "date": "2022年上半期",
+        "cont": {
+            "new": ["Quarogをリリースしました"],
+            "change": ["Quarogをリリースしました"],
+            "fix": ["Quarogをリリースしました"],
+            "important": ["Quarogをリリースしました"],
+            "other": ["Quarogをリリースしました"]
+        }
+    }]
+}

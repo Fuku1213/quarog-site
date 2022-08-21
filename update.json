@@ -1,18 +1,18 @@
 {
     "latest": {
         "ver": "1.0.0",
-        "date": "2022年上半期",
+        "date": "2022年下半期",
         "main": "正式版リリース"
     },
     "history": [{
         "ver": "1.0.0",
-        "date": "2022年上半期",
+        "date": "2022年下半期",
         "cont": {
-            "new": "",
-            "change": "",
-            "fix": "",
-            "important": "",
-            "other": ""
+            "new": [],
+            "change": [],
+            "fix": [],
+            "important": [],
+            "other": []
         }
     }]
 }
