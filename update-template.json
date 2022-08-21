@@ -8,11 +8,11 @@
         "ver": "1.0.0",
         "date": "2022年上半期",
         "cont": {
-            "new": ["Quarogをリリースしました"],
-            "change": ["Quarogをリリースしました"],
-            "fix": ["Quarogをリリースしました"],
-            "important": ["Quarogをリリースしました"],
-            "other": ["Quarogをリリースしました"]
+            "new": ["追加要素"],
+            "change": ["変更点"],
+            "fix": ["修正点"],
+            "important": ["重要点"],
+            "other": ["その他項目"]
         }
     }]
 }
