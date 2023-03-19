@@ -177,6 +177,15 @@ header {
   list-style-position: inside;
   text-indent: -1rem;
 }
+#content ol li {
+  font-size: 1.2rem;
+  margin: 0.3rem 0.2rem;
+  margin-left: 1.6rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.6rem;
+  list-style-position: inside;
+  text-indent: -1rem;
+}
 footer {
   width: 100%;
   height: 6rem;
