@@ -3,7 +3,7 @@ function withoutRuntime() {
         display: "block"
     });
 
-    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=11AHOJXba4y-hLLxUZ1YM6RJZGsTCUelO&export=download");
+    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=12cM4Dxh3nfOEJB69a-e8zFIJ2qhfLJh_&export=download");
 }
 
 function mergedRuntime() {
@@ -11,7 +11,7 @@ function mergedRuntime() {
         display: "block"
     });
 
-    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=1Oum8y_ljnWElUIQEeRKNH1JDEzBxqI3t&export=download");
+    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=1LPkMFgw8Za0yT5RnX2to3dy6BDjDOqII&export=download");
 }
 
 function downloadQuarog() {
