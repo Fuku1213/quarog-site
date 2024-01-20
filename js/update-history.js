@@ -72,8 +72,7 @@ $(() => {
             }
 
             $("#updateLog").append(
-                `<h3>アップデート履歴</h3>
-                <ul>
+                `<ul>
                     <li><b style="font-size: 1.4rem;">Ver. ${data.history[i].ver} - ${data.history[i].date}</b>
                         <ul>
                             ${important}
