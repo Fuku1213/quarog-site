@@ -11,7 +11,7 @@ function mergedRuntime() {
         display: "block"
     });
 
-    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=1nSKc39kHIR7odpX9Zk8gclt2Vho5_vQm&export=download");
+    $("#quarog-dl").attr("href", "https://drive.google.com/u/0/uc?id=1-w58QtHdgA-2jvA_BWQyIwRbAJgYEO4f&export=download");
 }
 
 function downloadQuarog() {
